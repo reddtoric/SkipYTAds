@@ -14,21 +14,21 @@ This script automatically searches for the skip button every 6 seconds (adjustab
 In a cli, traverse into the directory and run `$ py ./skip_ads.py` or double click script to run.
 
 ## Pausing/Unpausing script
-Press the `pause` button to toggle between pausing and resuming the script.
+Press the keyboard `pause` button to toggle between pausing and resuming the script.
 
 ## Verbosity Modes
 Adjustable in file/overridable with cli arguments.  
 'a' = Show all outputs  
 't' = Show toggle (pause/unpause) outputs (Default)  
 'q' = Quiet  
-`$ py .\skip_ad.py -v a`
+Show all example: `$ py .\skip_ad.py -v a`
 
 ## Interval
-Default interval is 6 seconds but is adjustable in file/overridable with cli arguments. Float number greater than or equal to 1 accepted.
+Default interval is 6 seconds but is adjustable in file/overridable with cli arguments. Accepts float number greater than or equal to 1.
 `$ py .\skip_ad.py -i 1`
 
 ## Running multiple monitors?
-Use the verify_corner_pos script in the optional folder to find out the position value of your top-left corner.  
+Use the opt_verify_corner_pos script to find out the position value of your top-left corner.  
 I have a 2x2 setup where my bottom-right monitor is the main display. So, my top-left corner are negative values. My monitors are 2560x1080 so I have to override the screen min values like so `override_screen_min = Point(-2560, -1080)` in user settings section.
 
 If you're like me with a 2x2 setup, uncomment all code sections under "Ref: Stick Corner Workaround".
@@ -38,7 +38,7 @@ Mismatched monitor sizes can cause problems.
 You on your own if problems arise.
 
 ## Other settings
-`rel_file_path` path of the image to match on desktop  
+`rel_file_path` path of the image to match with.
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
 
 ## Features to implement (if I feel like it)
