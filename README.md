@@ -21,17 +21,10 @@ Press the `pause` button to toggle between pausing and resuming the script.
 ## Interval
 Default `interval` is 6 seconds but is adjustable.
 
-### Other settings
+## Other settings
 `Offset_x, _y` where you want the cursor to click on, in the event it's for something else.  
 `rel_file_path` path of the image to match on desktop  
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
-
-### Dev note
-This script may be clunky and not robust but it works to my specs. I wanted something that clicks the button for me when I'm doing stuff and have a video playing. 
-
-It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with. 
-
-I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights assuming it's popular/everyone owns them?!
 
 ## Features to implement (if I feel like it)
 - Set back focus on original window to minimize interruption
@@ -39,3 +32,12 @@ I don't use ad blockers because I actually like to see some of the ads. But othe
 - GUI notification for pause/resume
 - Run in background
 - Auto start up app
+
+---
+
+### Dev note
+This script may be clunky and not robust but it works to my specs. I wanted something that clicks the button for me when I'm doing stuff and have a video playing. 
+
+It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with. 
+
+I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights assuming it's popular/everyone owns them?!
