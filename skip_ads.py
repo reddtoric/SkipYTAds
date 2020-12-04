@@ -17,7 +17,7 @@ VERBOSE = 't'
 interval = 6
 
 # Relative path and file name of skip ads image
-rel_file_path = "skip ads.png"
+rel_file_path = ["skip ads.png", "skip ad.png"]
 
 # Accuracy (min:0, max: 1)
 accuracy = 0.6
@@ -66,7 +66,7 @@ if args.interval is not None:
 
 # Absolute file path
 script_dir = os.path.dirname(__file__)
-abs_file_path = os.path.join(script_dir, rel_file_path)
+abs_file_path = [os.path.join(script_dir, i) for i in rel_file_path]
 
 # Is_SearchLoop_enabled
 is_enabled = True
@@ -114,34 +114,35 @@ def search():
     if VERBOSE == 'a':
         print("Searching")
 
-    # Search 'skip ads' image
-    pos = imagesearch(abs_file_path, 0.6)
+    for i in range(0,len(abs_file_path)):
+        # Search 'skip ads' image
+        pos = imagesearch(abs_file_path[i], 0.6)
 
-    if pos[0] != -1:
-        x = pos[0] + screen_min.x
-        y = pos[1] + screen_min.y
+        if pos[0] != -1:
+            x = pos[0] + screen_min.x
+            y = pos[1] + screen_min.y
 
-        if VERBOSE == 'a':
-            print("Ad position: ", x, y)
+            if VERBOSE == 'a':
+                print("Ad position: ", x, y)
 
-        # Save current mouse position
-        (original_cursor_pos.x, original_cursor_pos.y) = pyautogui.position()
+            # Save current mouse position
+            (original_cursor_pos.x, original_cursor_pos.y) = pyautogui.position()
 
-        # Second half of workaround for center sticky corners
-        #if y < 0:
-        #    ctypes.windll.user32.SetCursorPos(screen_center.x, -1 * screen_center.x)
-        #else:
-        #    ctypes.windll.user32.SetCursorPos(screen_center.x, screen_center.y)
+            # Second half of workaround for center sticky corners
+            #if y < 0:
+            #    ctypes.windll.user32.SetCursorPos(screen_center.x, -1 * screen_center.x)
+            #else:
+            #    ctypes.windll.user32.SetCursorPos(screen_center.x, screen_center.y)
 
-        # Mouse left click on center of button
-        pyautogui.click(x + button_offset.x, y + button_offset.y)
+            # Mouse left click on center of button
+            pyautogui.click(x + button_offset.x, y + button_offset.y)
 
-        if VERBOSE == 'a':
-            print("Ad skipped")
+            if VERBOSE == 'a':
+                print("Ad skipped")
 
-        # Move mouse back
-        ctypes.windll.user32.SetCursorPos(original_cursor_pos.x,
-                                          original_cursor_pos.y)
+            # Move mouse back
+            ctypes.windll.user32.SetCursorPos(original_cursor_pos.x,
+                                              original_cursor_pos.y)
 
 
 # Def the search loop thread
