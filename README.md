@@ -33,6 +33,15 @@ Default `interval` is 6 seconds but is adjustable.
 - Run in background
 - Auto start up app
 
+## Libraries used
+- [python-imagesearch](https://github.com/drov0/python-imagesearch)
+- [PyAutoGUI](https://github.com/asweigart/pyautogui)
+- [pynput](https://pypi.org/project/pynput/)
+- ctypes
+- time
+- os
+- threading
+
 ---
 
 ### Dev note
