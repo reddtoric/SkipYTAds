@@ -38,7 +38,7 @@ Mismatched monitor sizes can cause problems.
 You on your own if problems arise.
 
 ## Other settings
-`rel_file_path` path of the image to match with.
+`rel_file_path` path of the image to match with.  
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
 
 ## Features to implement (if I feel like it)
