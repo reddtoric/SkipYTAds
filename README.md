@@ -27,7 +27,7 @@ Default `interval` is 6 seconds but is adjustable.
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
 
 ## Features to implement (if I feel like it)
-- Set back focus on original window to minimize interruption
+- Set focus back to original window to minimize interruption
 - More robust solution
 - GUI notification for pause/resume
 - Run in background
