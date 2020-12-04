@@ -14,16 +14,16 @@ In a cli within the directory you downloaded the repo, run `py ./skip_ads.py`
 Press the `pause` button to toggle between pausing and resuming the script.
 
 ## Verbosity Modes
-2 variables defined in the script that allows you to choose whether the script is verbose or not.
-`VERBOSE = True` will display all messages.
-`VERBOSE_PAUSE = True` will display when you toggle pause/resume.
+2 variables defined in the script that allows you to choose whether the script is verbose or not.  
+`VERBOSE = True` will display all messages.  
+`VERBOSE_PAUSE = True` will display when you toggle pause/resume.  
 
 ## Interval
 Default `interval` is 6 seconds but is adjustable.
 
 ### Other settings
-`Offset_x, _y` where you want the cursor to click on, in the event it's for something else.
-`rel_file_path` path of the image to match on desktop
+`Offset_x, _y` where you want the cursor to click on, in the event it's for something else.  
+`rel_file_path` path of the image to match on desktop  
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
 
 ### Dev note
