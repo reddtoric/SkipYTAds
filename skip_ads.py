@@ -16,9 +16,6 @@ VERBOSE = 't'
 # Interval in seconds
 interval = 6
 
-# Center of button (top left corner = 0,0)
-button_offset = Point(50, 20)
-
 # Relative path and file name of skip ads image
 rel_file_path = "skip ads.png"
 
@@ -35,12 +32,20 @@ override_screen_min = None
 # ---
 
 
+# Offset to click on the center
+button_offset = Point(50, 20)
+
 # Verbosity and interval override with cli arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('-v', '--verbose', choices=['a','t','q'], default='t',
-    help="Set verbosity. Show (a)ll outputs, show (t)oggle only outputs, or (q)uiet output.")
-parser.add_argument('-i', '--interval', metavar='float>=1', type=float,
-    help="Set interval in seconds.")
+parser.add_argument('-v', '--verbose',
+                    choices=['a', 't', 'q'],
+                    default='t',
+                    help="Set verbosity. Show (a)ll outputs, show (t)oggle \
+                          only outputs, or (q)uiet output.")
+parser.add_argument('-i', '--interval',
+                    metavar='float>=1',
+                    type=float,
+                    help="Set interval in seconds.")
 
 # Override verbose
 args = parser.parse_args()
@@ -56,7 +61,7 @@ else:
     mode = "quiet"
 
 # Override interval
-if args.interval != None:
+if args.interval is not None:
     interval = args.interval if args.interval >= 1 else 1
 
 # Absolute file path
@@ -68,6 +73,13 @@ is_enabled = True
 
 # Top-Left of display corner
 screen_min = override_screen_min or Point()
+
+# Ref: Stick Corner Workaround
+# First half of my workaround for center sticky corner in 2x2 monitor setup
+#screen_center = Point()
+#(screen_center.x, screen_center.y) = pyautogui.size()
+#screen_center.x = int(screen_center.x/2)
+#screen_center.y = int(screen_center.y/2)
 
 # Where user had cursor originally
 original_cursor_pos = Point()
@@ -108,18 +120,18 @@ def search():
     if pos[0] != -1:
         x = pos[0] + screen_min.x
         y = pos[1] + screen_min.y
-        
+
         if VERBOSE == 'a':
             print("Ad position: ", x, y)
 
         # Save current mouse position
         (original_cursor_pos.x, original_cursor_pos.y) = pyautogui.position()
 
-        # Workaround for sticky corners
-        if y < 0:
-            ctypes.windll.user32.SetCursorPos(1280, -540)
-        else:
-            ctypes.windll.user32.SetCursorPos(1280, 540)
+        # Second half of workaround for center sticky corners
+        #if y < 0:
+        #    ctypes.windll.user32.SetCursorPos(screen_center.x, -1 * screen_center.x)
+        #else:
+        #    ctypes.windll.user32.SetCursorPos(screen_center.x, screen_center.y)
 
         # Mouse left click on center of button
         pyautogui.click(x + button_offset.x, y + button_offset.y)
@@ -140,13 +152,13 @@ class SearchLoop(Thread):
             search()
 
             if VERBOSE == 'a':
-                print("Waiting " + str(interval) + "s")
+                print(f"Waiting {str(interval)}s")
 
             # Wait x sec before searching again
             time.sleep(interval)
 
 
 # Main
-print("Running skip_ads.py at " + str(interval) + "s intervals in " + mode + " mode.")
+print(f"Running skip_ads.py at {str(interval)}s intervals in {mode} mode.")
 KeyboardListener().start()
 SearchLoop().start()
