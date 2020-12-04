@@ -8,7 +8,7 @@ This script automatically searches for the skip button every 6 seconds (adjustab
 
 
 ## Running the script
-In a cli within the directory you downloaded the repo, run `py ./skip_ads.py`
+In a cli, traverse into the directory and run `py ./skip_ads.py`
 
 ## Pausing/Unpausing script
 Press the `pause` button to toggle between pausing and resuming the script.
