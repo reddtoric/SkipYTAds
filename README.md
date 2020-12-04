@@ -17,9 +17,9 @@ In a cli, traverse into the directory and run `$ py ./skip_ads.py` or double cli
 Press the `pause` button to toggle between pausing and resuming the script.
 
 ## Verbosity Modes
-Adjustable in file/overridable with cli arguments.
+Adjustable in file/overridable with cli arguments.  
 'a' = Show all outputs  
-'t' = Show toggle (pause/unpause) outputs (Default)
+'t' = Show toggle (pause/unpause) outputs (Default)  
 'q' = Quiet  
 `$ py .\skip_ad.py -v a`
 
