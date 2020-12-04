@@ -40,4 +40,4 @@ This script may be clunky and not robust but it works to my specs. I wanted some
 
 It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with. 
 
-I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights assuming it's popular/everyone owns them?!
+I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights!? Just assuming that it's popular or everyone owns them.
