@@ -137,12 +137,15 @@ def search():
             # Mouse left click on center of button
             pyautogui.click(x + button_offset.x, y + button_offset.y)
 
-            if VERBOSE == 'a':
+            if VERBOSE == 'a' or VERBOSE == 't':
                 print("Ad skipped")
 
             # Move mouse back
             ctypes.windll.user32.SetCursorPos(original_cursor_pos.x,
                                               original_cursor_pos.y)
+
+            # Break for loop if first version is already found and clicked
+            break
 
 
 # Def the search loop thread
