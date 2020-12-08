@@ -4,6 +4,8 @@ Hate YouTube ads but don't want to use an ad blocker? You don't mind those ads b
 
 This script automatically searches for the skip button every 6 seconds (adjustable) and if there is a skippable ad, it'll skip it for you. And if you're in the middle of watching a skippable ad but interested in continuing, just press the pause button (before it does it's thing) and it'll pause the script. Then returns your cursor back to where it was (but does not refocus your original window; a desired feature possibly added).
 
+Best for when you are doing something not necessarily on PC and you have videos playing as background tv.
+
 **!Important:** The skip button has to be visible! It cannot be hidden behind another window.
 
 (A python script that uses [python-imagesearch](https://github.com/drov0/python-imagesearch) to search for matching various YouTube's skip buttons and uses [PyAutoGUI](https://github.com/asweigart/pyautogui) to click the button.)
