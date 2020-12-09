@@ -73,7 +73,7 @@ Script is not browser dependent so you can use your favorite browser. (If button
 
 ## Other settings
 
-`accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
+`accuracy` accuracy of the image match. See python-imagesearch docs for more info. Default is 0.6. min: 0, max: 1
 
 ## Ad not skipping? Want script to match other images to click?
 
