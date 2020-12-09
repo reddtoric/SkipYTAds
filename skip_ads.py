@@ -1,4 +1,4 @@
-# Version: 1.1
+# Version: 1.1.1
 
 from python_imagesearch.imagesearch import imagesearch
 import pyautogui
@@ -19,7 +19,7 @@ VERBOSE = 't'
 interval = 6
 
 # Accuracy (min:0, max: 1)
-accuracy = 0.6
+accuracy = 0.8
 
 # Override screen_min if top-left not (0,0). Default = None
 # Set to None to not override
@@ -123,7 +123,7 @@ def search():
 
     for i in range(0,len(images)):
         # Search 'skip ads' image
-        pos = imagesearch(images[i], 0.6)
+        pos = imagesearch(images[i], accuracy)
 
         if pos[0] != -1:
             x = pos[0] + screen_min.x
