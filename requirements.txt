@@ -1,0 +1,3 @@
+PyAutoGUI==0.9.52
+python_imagesearch==1.1.2
+pynput==1.7.1

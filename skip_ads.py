@@ -1,3 +1,5 @@
+# Version: 1.1
+
 from python_imagesearch.imagesearch import imagesearch
 import pyautogui
 import ctypes
@@ -16,9 +18,6 @@ VERBOSE = 't'
 # Interval in seconds
 interval = 6
 
-# Relative path and file name of skip ads image
-rel_file_path = ["skip ads.png", "skip ad.png"]
-
 # Accuracy (min:0, max: 1)
 accuracy = 0.6
 
@@ -32,8 +31,17 @@ override_screen_min = None
 # ---
 
 
+# Relative directory path of where all the images to search/match against
+rel_dir_path = "images"
+
 # Offset to click on the center
 button_offset = Point(50, 20)
+
+# Absolute file path of script
+script_dir = os.path.dirname(__file__)
+
+# List of image file paths in directory
+images = [os.path.join(script_dir, rel_dir_path, img) for img in os.listdir(rel_dir_path)]
 
 # Verbosity and interval override with cli arguments
 parser = argparse.ArgumentParser()
@@ -64,10 +72,6 @@ else:
 if args.interval is not None:
     interval = args.interval if args.interval >= 1 else 1
 
-# Absolute file path
-script_dir = os.path.dirname(__file__)
-abs_file_path = [os.path.join(script_dir, i) for i in rel_file_path]
-
 # Is_SearchLoop_enabled
 is_enabled = True
 
@@ -95,6 +99,9 @@ def on_press(key):
 
         is_enabled = not is_enabled
 
+        # Restart search
+        SearchLoop().start()
+
 
 # Ignore on release
 def on_release(key):
@@ -114,9 +121,9 @@ def search():
     if VERBOSE == 'a':
         print("Searching")
 
-    for i in range(0,len(abs_file_path)):
+    for i in range(0,len(images)):
         # Search 'skip ads' image
-        pos = imagesearch(abs_file_path[i], 0.6)
+        pos = imagesearch(images[i], 0.6)
 
         if pos[0] != -1:
             x = pos[0] + screen_min.x

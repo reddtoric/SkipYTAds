@@ -10,6 +10,24 @@ Best for when you are doing something not necessarily on PC and you have videos 
 
 (A python script that uses [python-imagesearch](https://github.com/drov0/python-imagesearch) to search for matching various YouTube's skip buttons and uses [PyAutoGUI](https://github.com/asweigart/pyautogui) to click the button.)
 
+<!-- TOC -->
+
+- [SkipYTAds](#skipytads)
+  - [Prerequisites](#prerequisites)
+  - [Running the script](#running-the-script)
+  - [Pausing/Unpausing script](#pausingunpausing-script)
+  - [Verbosity Modes](#verbosity-modes)
+  - [Adjustable Interval](#adjustable-interval)
+  - [Running multiple monitors?](#running-multiple-monitors)
+  - [Compatibility](#compatibility)
+  - [Other settings](#other-settings)
+  - [Ad not skipping? Want script to match other images to click?](#ad-not-skipping-want-script-to-match-other-images-to-click)
+  - [Features to implement](#features-to-implement)
+  - [Libraries used](#libraries-used)
+    - [Dev note](#dev-note)
+
+<!-- /TOC -->
+
 ## Prerequisites
 
 *To do. Python 3?
@@ -46,20 +64,19 @@ Mismatched monitor sizes can cause problems.
 
 ## Compatibility
 
-Tested on Windows 10. Not tested on Linux/MacOS. 
+Tested on Windows 10. Not tested on Linux/MacOS.
 
 Script is not browser dependent so you can use your favorite browser. (If button image is different size, screenshot and replace the original images.)
 
 ## Other settings
 
-`rel_file_path` path of the images to match with.  
 `accuracy` accuracy of the image match. Default is 0.6. min: 0, max: 1
 
-## Ad not skipping? Want script to match other images to click? 
+## Ad not skipping? Want script to match other images to click?
 
-If button image is a different size or different color, the imagesearch will not match because it's not an AI script; it literally matches pixels. 
+If button image is a different size or different color, the imagesearch will not match because it's not an AI script; it literally matches pixels.
 
-Simply add additional or replace original images to the folder and script in the `rel_file_path` variable.
+Simply add additional or replace original images in the images folder. No need to add anything like "filename.png" in the script.
 
 ## Features to implement
 
@@ -84,8 +101,8 @@ Simply add additional or replace original images to the folder and script in the
 
 ### Dev note
 
-This script may be clunky and not robust but it works to my specs. I wanted something that clicks the button for me when I'm doing stuff and have a video playing. 
+This script may be clunky and not robust but it works to my specs. I wanted something that clicks the button for me when I'm doing stuff and have a video playing.
 
-It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with. 
+It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with.
 
 I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights!? Just assuming that it's popular or everyone owns them.
