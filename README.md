@@ -10,9 +10,12 @@ Best for when you are doing something not necessarily on PC and you have videos 
 
 (A python script that uses [python-imagesearch](https://github.com/drov0/python-imagesearch) to search for matching various YouTube's skip buttons and uses [PyAutoGUI](https://github.com/asweigart/pyautogui) to click the button.)
 
+## Table of Contents
+
 <!-- TOC -->
 
 - [SkipYTAds](#skipytads)
+  - [Table of Contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Running the script](#running-the-script)
   - [Pausing/Unpausing script](#pausingunpausing-script)
@@ -24,7 +27,7 @@ Best for when you are doing something not necessarily on PC and you have videos 
   - [Ad not skipping? Want script to match other images to click?](#ad-not-skipping-want-script-to-match-other-images-to-click)
   - [Features to implement](#features-to-implement)
   - [Libraries used](#libraries-used)
-    - [Dev note](#dev-note)
+  - [Dev note](#dev-note)
 
 <!-- /TOC -->
 
@@ -99,7 +102,7 @@ Simply add additional or replace original images in the images folder. No need t
 
 ---
 
-### Dev note
+## Dev note
 
 This script may be clunky and not robust but it works to my specs. I wanted something that clicks the button for me when I'm doing stuff and have a video playing.
 
