@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2 - Dec 13 2020
+
+### Changed
+
+- Cropped images and update accuracy and offset to work with the cropped images.
+
 ## 1.1.1 - Dec 9 2020
 
 ### Fixed

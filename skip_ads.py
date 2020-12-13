@@ -1,4 +1,4 @@
-# Version: 1.1.1
+# Version: 1.1.2
 
 from python_imagesearch.imagesearch import imagesearch
 import pyautogui
@@ -18,9 +18,6 @@ VERBOSE = 't'
 # Interval in seconds
 interval = 6
 
-# Accuracy (min:0, max: 1)
-accuracy = 0.8
-
 # Override screen_min if top-left not (0,0). Default = None
 # Set to None to not override
 override_screen_min = None
@@ -31,11 +28,14 @@ override_screen_min = None
 # ---
 
 
+# Accuracy (min:0, max: 1)
+accuracy = 0.9
+
 # Relative directory path of where all the images to search/match against
 rel_dir_path = "images"
 
-# Offset to click on the center
-button_offset = Point(50, 20)
+# Offset to click within the button rather than top-left most corner of matching image
+button_offset = Point(0, 20)
 
 # Absolute file path of script
 script_dir = os.path.dirname(__file__)

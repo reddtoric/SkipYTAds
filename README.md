@@ -25,8 +25,10 @@ Best for when you are doing something not necessarily on PC and you have videos 
   - [Compatibility](#compatibility)
   - [Other settings](#other-settings)
   - [Ad not skipping? Want script to match other images to click?](#ad-not-skipping-want-script-to-match-other-images-to-click)
+  - [Known issues](#known-issues)
   - [Features to implement](#features-to-implement)
   - [Libraries used](#libraries-used)
+  - [Specs](#specs)
   - [Dev note](#dev-note)
 
 <!-- /TOC -->
@@ -73,13 +75,22 @@ Script is not browser dependent so you can use your favorite browser. (If button
 
 ## Other settings
 
-`accuracy` accuracy of the image match. See python-imagesearch docs for more info. Default is 0.8. min: 0, max: 1
+~~`accuracy` accuracy of the image match. See python-imagesearch docs for more info. Default is 0.8. min: 0, max: 1~~ Accuracy is now 0.9 and not a settings anymore because anything less than ≈0.87 accuracy will have false positives with YT's video titles with capital 'A'.
 
 ## Ad not skipping? Want script to match other images to click?
 
 If button image is a different size or different color, the imagesearch will not match because it's not an AI script; it literally matches pixels.
 
 Simply add additional or replace original images in the images folder. No need to add anything like "filename.png" in the script.
+
+## Known issues
+
+- Does not match button when a (non-solid black color) video is in the background of the button. Basically anything that does not match any images in the images folder.
+  This problem won't be fixed in this project because that would require a different implementation (i.e. AI image recognition).
+  - Ideal working example:
+  <img src="/example ideal.png" alt="Ideal example" />
+  - Example of what will not work at all:
+  <img src="/example error.png" alt="Example of what will not work" />
 
 ## Features to implement
 
@@ -101,6 +112,14 @@ Simply add additional or replace original images in the images folder. No need t
 - argparse
 
 ---
+
+## Specs
+
+What I wanted:
+
+- Skips ads for me so that I don't have to physically do it for whatever reason
+- Does not completely block ads because I want to see some ads
+- Offer a way to stop from skipping
 
 ## Dev note
 
