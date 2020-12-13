@@ -87,10 +87,9 @@ Simply add additional or replace original images in the images folder. No need t
 
 - Does not match button when a (not solid black color) video is in the background of the button. Basically anything that does not match any images in the images folder.
   This problem won't be fixed in this project because that would require a different implementation (i.e. AI image recognition).
-  - Ideal working example:
-  <img src="/example ideal.png" alt="Ideal example" />
-  - Example of what will not work at all:
-  <img src="/example error.png" alt="Example of what will not work" />
+  | Ideal working example | Example of what will not work |
+  | --- | --- |
+  | <img src="/example ideal.png" alt="Ideal example" /> | <img src="/example error.png" alt="Example of what will not work" /> |
 
 ## Features to implement
 
