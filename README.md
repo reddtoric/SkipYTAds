@@ -75,7 +75,7 @@ Script is not browser dependent so you can use your favorite browser. (If button
 
 ## Other settings
 
-`accuracy` accuracy of the image match. See python-imagesearch docs for more info. Default is 0.8. min: 0, max: 1
+~~`accuracy` accuracy of the image match. See python-imagesearch docs for more info. Default is 0.8. min: 0, max: 1~~ Accuracy is now 0.9 and not a settings anymore because anything less than ≈0.87 accuracy will have false positives with YT's video titles with capital 'A'.
 
 ## Ad not skipping? Want script to match other images to click?
 
@@ -85,7 +85,7 @@ Simply add additional or replace original images in the images folder. No need t
 
 ## Known issues
 
-- Does not match button when a (not solid black color) video is in the background of the button. Basically anything that does not match any images in the images folder.
+- Does not match button when a (non-solid black color) video is in the background of the button. Basically anything that does not match any images in the images folder.
   This problem won't be fixed in this project because that would require a different implementation (i.e. AI image recognition).
   | Ideal working example | Example of what will not work |
   | --- | --- |
