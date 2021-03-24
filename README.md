@@ -16,6 +16,7 @@ Best for when you are doing something not necessarily on PC and you have videos 
 
 - [SkipYTAds](#skipytads)
   - [Table of Contents](#table-of-contents)
+  - [What this is and what this is NOT](#what-this-is-and-what-this-is-not)
   - [Prerequisites](#prerequisites)
   - [Running the script](#running-the-script)
   - [Pausing/Unpausing script](#pausingunpausing-script)
@@ -32,6 +33,13 @@ Best for when you are doing something not necessarily on PC and you have videos 
   - [Dev note](#dev-note)
 
 <!-- /TOC -->
+
+## What this is and what this is NOT
+
+<u>*What this is:*</u> A simple script that auto skips YouTube ads handsfree. It can get in the way if you're also doing something on your computer.
+<u>*What this is **NOT**:*</u> NOT an Adblocker. This is not an Adblocker in any way. And this is not a polished piece of program either. It's got flaws.
+
+<sub>*See [Specs](#specs) & [Dev note](#dev-note) for further details.</sub>
 
 ## Prerequisites
 
@@ -127,3 +135,5 @@ This script may be clunky and not robust but it works to my specs. I wanted some
 It doesn't work while in a game that centers your cursor and not allowing it outside of the window which I'm okay with.
 
 I don't use ad blockers because I actually like to see some of the ads. But other ads like an ad of a tutorial on a brand of smart lights that is several minutes long is extremely displeasing. I DON'T OWN ANY. Why is an **ad** showing me how to use smart lights!? Just assuming that it's popular or everyone owns them.
+
+`ctypes` is used even though `pyautogui` can also move cursor because I came across an issue when the click area is near edge/corner of 1 of my monitors at some point in making this script. So, I used `ctypes` and stuck with it and don't care if it's unnecessary.
