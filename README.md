@@ -87,6 +87,8 @@ Script is not browser dependent so you can use your favorite browser. (If button
 
 ## Ad not skipping? Want script to match other images to click?
 
+Note: The screenshots of the button is with a browser zoom at 90%. If your browser zoom is not 90%, replace with your own cropped screenshots.
+
 If button image is a different size or different color, the imagesearch will not match because it's not an AI script; it literally matches pixels.
 
 Simply add additional or replace original images in the images folder. No need to add anything like "filename.png" in the script.
