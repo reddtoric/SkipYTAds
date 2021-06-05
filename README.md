@@ -2,6 +2,8 @@
 
 Hate YouTube ads but don't want to use an ad blocker? You don't mind those ads because some are good or introduces you to new things but you don't want those extra long annoying ones? Well, here's a python script just for that!
 
+I welcome advertisements because I discover new things I may not discover on my own so I don't use ad blockers. However, I don't want to manually skip every time when I'm working on something else at my desk or I'm watching something to relax. This script allows me to leave a video on and not have to tend to advertisements—specifically the ads with 10+ minutes like the 1 hour ones or longer. (Why?! Why do these companies think anyone would want an ad that long??!)
+
 This script automatically searches for the skip button every 6 seconds (adjustable) and if there is a skippable ad, it'll skip it for you. And if you're in the middle of watching a skippable ad but interested in continuing, just press the pause button (before it does it's thing) and it'll pause the script. Then returns your cursor back to where it was (but does not refocus your original window; a desired feature possibly added).
 
 Best for when you are doing something not necessarily on PC and you have videos playing as background tv.
