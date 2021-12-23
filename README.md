@@ -51,6 +51,8 @@ Best for when you are doing something not necessarily on PC and you have videos 
 
 In a cli, traverse into the directory and run `$ py ./skip_ads.py` or double click script to run.
 
+Alternatively, create a shortcut to either skip_ads.py or skip_ads_minimized.bat (for windows) and to click on or placed in startup folder.
+
 ## Pausing/Unpausing script
 
 Press the keyboard `pause` button to toggle between pausing and resuming the script.
